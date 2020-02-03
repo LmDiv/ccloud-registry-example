@@ -1,0 +1,7 @@
+---
+schemas:
+  - subject: TAXI-TRIP-DROPOFF-2018-11-28-value
+    file: schema1.avsc
+
+  - subject: 404-NO-SUBJECT-FOUND-value
+    file: schema2.avsc

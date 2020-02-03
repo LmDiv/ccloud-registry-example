@@ -1,0 +1,8 @@
+---
+schemas:
+  - subject: TAXI-TRIP-DROPOFF-2018-11-28-value
+    file: 404.avsc
+
+  - subject: TAXI-TRIP-PICKUP-2018-11-28-value
+    file: schema2.avsc
+
