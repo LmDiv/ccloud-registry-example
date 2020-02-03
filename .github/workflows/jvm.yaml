@@ -5,15 +5,20 @@ on:
     branches:
       - 'jvm'
 
-jobs:
+jobs: 
+  login:
+    name: Login Workflow Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker login -u ${{ github.actor }} -p ${{ github.token }} docker.pkg.github.com
+
   main:
+    needs: login
     name: Master Workflow Job
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
-
-      - run: docker login -u ${{ github.actor }} -p ${{ github.token }} docker.pkg.github.com
 
       - uses: divloic/ccloud-registry-action@preview
         with:
