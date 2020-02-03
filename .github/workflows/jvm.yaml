@@ -13,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - run: docker login -u ${{ github.actor }} -p ${{ github.token }} docker.pkg.github.com
+
       - uses: divloic/ccloud-registry-action@preview
         with:
           avro-files-path: src/main/avro/
