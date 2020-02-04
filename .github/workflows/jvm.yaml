@@ -5,15 +5,8 @@ on:
     branches:
       - 'jvm'
 
-jobs: 
-  login:
-    name: Login Workflow Job
-    runs-on: ubuntu-latest
-    steps:
-      - run: docker login -u ${{ github.actor }} -p ${{ github.token }} docker.pkg.github.com
-
+jobs:
   main:
-    needs: login
     name: Master Workflow Job
     runs-on: ubuntu-latest
 
