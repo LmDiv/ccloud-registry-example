@@ -1,19 +1,15 @@
 name: Master Workflow
 
+env:
+  DOCKER_AUTH_CONFIG: ${{ secrets.GITHUB_TOKEN }}
+
 on:
   push:
     branches:
       - 'jvm'
 
 jobs:
-  login:
-    name: Login Workflow Job
-    runs-on: ubuntu-latest
-    steps:
-      - run: docker login -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
-
   main:
-    needs: [login]
     name: Master Workflow Job
     runs-on: ubuntu-latest
 
