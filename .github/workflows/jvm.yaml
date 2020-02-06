@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: divloic/ccloud-registry-action@preview
+      - uses: divloic/ccloud-registry-action@master
         with:
           avro-files-path: src/main/resources/
           avro-subject-yaml: src/main/resources/schemas.yaml
