@@ -18,8 +18,8 @@ jobs:
 
       - uses: divloic/ccloud-registry-action@preview
         with:
-          avro-files-path: src/main/avro/
-          avro-subject-yaml: src/main/avro/schemas.yaml
+          avro-files-path: src/main/resources/
+          avro-subject-yaml: src/main/resources/schemas.yaml
           schema-registry-url: ${{ secrets.SCHEMA-REGISTRY-URL }}
           schema-registry-api-key: ${{ secrets.SCHEMA-REGISTRY-API-KEY }}
           schema-registry-secret-key: ${{ secrets.SCHEMA-REGISTRY-SECRET-KEY }}
