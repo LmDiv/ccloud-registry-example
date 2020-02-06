@@ -20,6 +20,6 @@ jobs:
         with:
           avro-files-path: src/main/resources/
           avro-subject-yaml: src/main/resources/schemas.yaml
-          schema-registry-url: ${{ secrets.SCHEMA-REGISTRY-URL }}
-          schema-registry-api-key: ${{ secrets.SCHEMA-REGISTRY-API-KEY }}
-          schema-registry-secret-key: ${{ secrets.SCHEMA-REGISTRY-SECRET-KEY }}
+          schema-registry-url: ${{ secrets.SCHEMA_REGISTRY_URL }}
+          schema-registry-api-key: ${{ secrets.SCHEMA_REGISTRY_API_KEY }}
+          schema-registry-secret-key: ${{ secrets.SCHEMA_REGISTRY_SECRET_KEY }}
