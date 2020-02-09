@@ -1,0 +1,20 @@
+name: Tag Workflow
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  branch:
+    name: Branch Workflow Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout CCloud Registry Actions
+        uses: actions/checkout@v1
+
+      - name: print tag
+        run: echo ${{ github.ref }}
+
+
