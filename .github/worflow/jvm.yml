@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: divloic/ccloud-registry-action@master
+      - uses: divloic/ccloud-registry-action@v0.0.1
         with:
           avro-files-path: src/main/avro/
           avro-subject-yaml: src/main/avro/schemas.yaml
